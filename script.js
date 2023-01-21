@@ -18,7 +18,7 @@ const pixels = document.querySelectorAll(".pixel");
 
 pixels.forEach( (pixel) => {
     pixel.addEventListener("mouseenter", (e) => {
-        if (e.which === 1) {
+        if (e.which === 1 && !pixel.classList.contains("painted")) {
            pixel.classList.toggle("painted");
         }
     });
